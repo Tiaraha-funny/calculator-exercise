@@ -29772,7 +29772,7 @@ if ("development" === 'production') {
 } else {
   module.exports = require('./cjs/react-dom.development.js');
 }
-},{"./cjs/react-dom.development.js":"node_modules/react-dom/cjs/react-dom.development.js"}],"App.js":[function(require,module,exports) {
+},{"./cjs/react-dom.development.js":"node_modules/react-dom/cjs/react-dom.development.js"}],"CalculatorsComponents.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -29784,7 +29784,8 @@ var _react = _interopRequireDefault(require("react"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function App() {
+function CalculatorsComponents(_ref) {
+  var handleClick = _ref.handleClick;
   return /*#__PURE__*/_react.default.createElement("div", {
     id: "wrapper"
   }, /*#__PURE__*/_react.default.createElement("div", {
@@ -29792,29 +29793,169 @@ function App() {
   }, /*#__PURE__*/_react.default.createElement("div", {
     className: "top"
   }, /*#__PURE__*/_react.default.createElement("span", {
+    onClick: handleClick,
     className: "clear"
   }, "C"), /*#__PURE__*/_react.default.createElement("div", {
     className: "screen"
   })), /*#__PURE__*/_react.default.createElement("div", {
     className: "keys"
-  }, /*#__PURE__*/_react.default.createElement("span", null, "7"), /*#__PURE__*/_react.default.createElement("span", null, "8"), /*#__PURE__*/_react.default.createElement("span", null, "9"), /*#__PURE__*/_react.default.createElement("span", {
+  }, /*#__PURE__*/_react.default.createElement("span", {
+    onClick: handleClick
+  }, "7"), /*#__PURE__*/_react.default.createElement("span", {
+    onClick: handleClick
+  }, "8"), /*#__PURE__*/_react.default.createElement("span", {
+    onClick: handleClick
+  }, "9"), /*#__PURE__*/_react.default.createElement("span", {
+    onClick: handleClick,
     className: "operator"
-  }, "+"), /*#__PURE__*/_react.default.createElement("span", null, "4"), /*#__PURE__*/_react.default.createElement("span", null, "5"), /*#__PURE__*/_react.default.createElement("span", null, "6"), /*#__PURE__*/_react.default.createElement("span", {
+  }, "+"), /*#__PURE__*/_react.default.createElement("span", {
+    onClick: handleClick
+  }, "4"), /*#__PURE__*/_react.default.createElement("span", {
+    onClick: handleClick
+  }, "5"), /*#__PURE__*/_react.default.createElement("span", {
+    onClick: handleClick
+  }, "6"), /*#__PURE__*/_react.default.createElement("span", {
+    onClick: handleClick,
     className: "operator"
-  }, "-"), /*#__PURE__*/_react.default.createElement("span", null, "1"), /*#__PURE__*/_react.default.createElement("span", null, "2"), /*#__PURE__*/_react.default.createElement("span", null, "3"), /*#__PURE__*/_react.default.createElement("span", {
+  }, "-"), /*#__PURE__*/_react.default.createElement("span", {
+    onClick: handleClick
+  }, "1"), /*#__PURE__*/_react.default.createElement("span", {
+    onClick: handleClick
+  }, "2"), /*#__PURE__*/_react.default.createElement("span", {
+    onClick: handleClick
+  }, "3"), /*#__PURE__*/_react.default.createElement("span", {
+    onClick: handleClick,
     className: "operator"
-  }, "\xF7"), /*#__PURE__*/_react.default.createElement("span", null, "0"), /*#__PURE__*/_react.default.createElement("span", null, "."), /*#__PURE__*/_react.default.createElement("span", {
+  }, "\xF7"), /*#__PURE__*/_react.default.createElement("span", {
+    onClick: handleClick
+  }, "0"), /*#__PURE__*/_react.default.createElement("span", {
+    onClick: handleClick
+  }, "."), /*#__PURE__*/_react.default.createElement("span", {
+    onClick: handleClick,
     className: "eval"
   }, "="), /*#__PURE__*/_react.default.createElement("span", {
+    onClick: handleClick,
     className: "operator"
   }, "x"))), /*#__PURE__*/_react.default.createElement("div", {
     id: "about"
   }, /*#__PURE__*/_react.default.createElement("h1", null, "A calculator web app for your iPhone"), /*#__PURE__*/_react.default.createElement("p", null, "It features ", /*#__PURE__*/_react.default.createElement("strong", null, "less options"), " than your current calculator and ", /*#__PURE__*/_react.default.createElement("strong", null, "doesn't work so well"), " either."), /*#__PURE__*/_react.default.createElement("p", null, "Simply add this page to your Home Screen. ")));
 }
 
+var _default = CalculatorsComponents;
+exports.default = _default;
+},{"react":"node_modules/react/index.js"}],"App.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireWildcard(require("react"));
+
+var _CalculatorsComponents = _interopRequireDefault(require("./CalculatorsComponents"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+function App() {
+  var keys = document.getElementsByTagName("span");
+  var _ref = ["+", "-", "x", "÷"],
+      operators = _ref[0],
+      setOperators = _ref[1];
+
+  var _useState = (0, _react.useState)(false),
+      _useState2 = _slicedToArray(_useState, 2),
+      decimalAdded = _useState2[0],
+      setDecimalAdded = _useState2[1];
+
+  console.log(decimalAdded); // Add onclick event to all the keys and perform operations
+
+  function handleClick() {
+    console.log("I am clicked");
+
+    for (var i = 0; i < keys.length; i++) {
+      keys[i].onclick = function (e) {
+        console.log("I am clicked react"); // Get the input and button values
+
+        var input = document.querySelector(".screen");
+        var inputVal = input.innerHTML;
+        var btnVal = this.innerHTML; // Now, just append the key values (btnValue) to the input string and finally use javascript's eval function to get the result
+        // If clear key is pressed, erase everything
+
+        if (btnVal == "C") {
+          input.innerHTML = "";
+          setDecimalAdded(false);
+        } // If eval key is pressed, calculate and display the result
+        else if (btnVal == "=") {
+            var equation = inputVal;
+            var lastChar = equation[equation.length - 1]; // Replace all instances of x and ÷ with * and / respectively. This can be done easily using regex and the 'g' tag which will replace all instances of the matched character/substring
+
+            equation = equation.replace(/x/g, "*").replace(/÷/g, "/"); // Final thing left to do is checking the last character of the equation. If it's an operator or a decimal, remove it
+
+            if (operators.indexOf(lastChar) > -1 || lastChar == ".") equation = equation.replace(/.$/, "");
+            if (equation) input.innerHTML = eval(equation);
+            setDecimalAdded(false);
+          } // Basic functionality of the calculator is complete. But there are some problems like
+          // 1. No two operators should be added consecutively.
+          // 2. The equation shouldn't start from an operator except minus
+          // 3. not more than 1 decimal should be there in a number
+          // We'll fix these issues using some simple checks
+          // indexOf works only in IE9+
+          else if (operators.indexOf(btnVal) > -1) {
+              // Operator is clicked
+              // Get the last character from the equation
+              var lastChar = inputVal[inputVal.length - 1]; // Only add operator if input is not empty and there is no operator at the last
+
+              if (inputVal != "" && operators.indexOf(lastChar) == -1) input.innerHTML += btnVal; // Allow minus if the string is empty
+              else if (inputVal == "" && btnVal == "-") input.innerHTML += btnVal; // Replace the last operator (if exists) with the newly pressed operator
+
+              if (operators.indexOf(lastChar) > -1 && inputVal.length > 1) {
+                // Here, '.' matches any character while $ denotes the end of string, so anything (will be an operator in this case) at the end of string will get replaced by new operator
+                input.innerHTML = inputVal.replace(/.$/, btnVal);
+              }
+
+              setDecimalAdded(false);
+            } // Now only the decimal problem is left. We can solve it easily using a flag 'decimalAdded' which we'll set once the decimal is added and prevent more decimals to be added once it's set. It will be reset when an operator, eval or clear key is pressed.
+            else if (btnVal == ".") {
+                if (!decimalAdded) {
+                  input.innerHTML += btnVal;
+                  setDecimalAdded(true);
+                }
+              } // if any other key is pressed, just append it
+              else {
+                  input.innerHTML += btnVal;
+                } // prevent page jumps
+
+
+        e.preventDefault();
+      };
+    }
+  }
+
+  return /*#__PURE__*/_react.default.createElement(_CalculatorsComponents.default, {
+    handleClick: handleClick
+  });
+}
+
 var _default = App;
 exports.default = _default;
-},{"react":"node_modules/react/index.js"}],"index.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","./CalculatorsComponents":"CalculatorsComponents.js"}],"index.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
@@ -29854,7 +29995,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52474" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65225" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
